@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <item android:id="@+id/configuration"
+        android:title="Configuration"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="never"> <!--no mostrar nunca en el menu como icono-->
+    </item>
+
+    <item android:id="@+id/information"
+        android:title="Info"
+        android:icon="@android:drawable/ic_menu_info_details"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="10"> <!--mostrar unicamente cuando hay hueco-->
+    </item>
+
+    <item
+        android:id="@+id/menu_buscar"
+        android:title="Buscar"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        android:orderInCategory="5"> <!--como el orden es menor que el de information, se mostrará en segundo    lugar-->
+    </item>
+</menu>
